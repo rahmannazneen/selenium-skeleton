@@ -32,7 +32,7 @@ public class BaseTest {
         String browser = ConfigReader.get("browser");
         return switch (browser.toLowerCase()) {
             case "chrome" -> {
-                System.setProperty("webdriver.chrome.driver", "D:\\#Projects\\SeleniumAutomationFramework\\src\\test\\resources\\driver\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
                 yield new ChromeDriver();
             }
             case "firefox" -> {
