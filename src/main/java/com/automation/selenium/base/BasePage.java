@@ -21,9 +21,11 @@ public class BasePage {
                 .ignoring(NoSuchElementException.class); // Ignore specific exceptions
     }
 
+
     protected WebElement waitUntilVisible(By locator) {
         return fluentWait.until(driver -> driver.findElement(locator));
     }
+
 
     protected String getText(By locator) {
         return waitUntilVisible(locator).getText();

@@ -20,6 +20,7 @@ public class SignUpPage extends BasePage {
         click(signInLink);
     }
 
+
     public void insertUsername(String username) {
         type(signupUsername, username);
     }
