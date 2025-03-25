@@ -13,7 +13,7 @@ public class SignUpTest extends BaseTest {
         signUpPage.insertUsername(Constant.signup_username);
         signUpPage.insertPassword(Constant.signup_password);
         signUpPage.clickSubmitButton();
-        Thread.sleep(3000);
+
 
 
     }
