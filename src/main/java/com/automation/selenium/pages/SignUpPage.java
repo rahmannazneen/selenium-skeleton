@@ -12,6 +12,7 @@ public class SignUpPage extends BasePage {
     private final By signupPassword = By.id("sign-password");
     private final By signupSubmitButton = By.xpath("//button[text()='Sign up']");
 
+
     public SignUpPage(WebDriver driver) {
         super(driver);
     }

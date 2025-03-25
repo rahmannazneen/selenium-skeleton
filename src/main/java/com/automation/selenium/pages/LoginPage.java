@@ -4,27 +4,27 @@ import com.automation.selenium.base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage extends BasePage  {
+public class LoginPage extends BasePage {
 
     private WebDriver driver;
 
     // Locators
-    private By signInLink = By.linkText("Sign In");
-    private By loginEmail = By.id("email");
-    private By loginPassword = By.id("pass");
-    private By loginSubmitButton = By.id("send2");
+    private By loginLink = By.id("login2");
+    private By loginUsername = By.id("loginusername");
+    private By loginPassword = By.id("loginpassword");
+    private By loginSubmitButton = By.xpath("//button[text()='Log in']");
 
     public LoginPage(WebDriver driver) {
         super(driver);
     }
 
 
-
     public void clickSignInLink() {
-        click(signInLink);
+        click(loginLink);
     }
+
     public void enterLoginEmail(String username) {
-        type(loginEmail, username);
+        type(loginUsername, username);
     }
 
     public void enterLoginPassword(String password) {

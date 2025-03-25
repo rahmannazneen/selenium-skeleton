@@ -8,12 +8,13 @@ import tests.utils.Constant;
 public class LoginTests extends BaseTest {
 
     @Test
-    public void validLoginTest() {
+    public void validLoginTest() throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.clickSignInLink();
-        loginPage.enterLoginEmail(Constant.login_email);
+        Thread.sleep(3000);
+        loginPage.enterLoginEmail(Constant.login_username);
         loginPage.enterLoginPassword(Constant.login_password);
         loginPage.clickLogin();
-        Assert.assertEquals(webDriver.getTitle(), "Customer Login");
+        Assert.assertEquals(webDriver.getTitle(), "STORE");
     }
 }
