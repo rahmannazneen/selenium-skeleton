@@ -3,9 +3,21 @@
 <suite name="Automation" allow-return-values="true">
     <test name="UI Test">
         <classes>
+            <class name="tests.SignUpTest">
+                <methods>
+                    <include name="testValidSignUp">
+                    </include>
+                </methods>
+            </class>
             <class name="tests.LoginTests">
                 <methods>
                     <include name="validLoginTest">
+                    </include>
+                </methods>
+            </class>
+            <class name="tests.PurchaseTest">
+                <methods>
+                    <include name="purchaseRandomPhone">
                     </include>
                 </methods>
             </class>
